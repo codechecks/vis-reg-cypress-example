@@ -13,5 +13,8 @@ jobs:
       - run: .circleci/install-yarn.sh
       - run: source /opt/circleci/.nvm/nvm.sh && yarn
       - run:
-          name: Running E2E tests with JUnit reporter
+          name: Running E2E
           command: source /opt/circleci/.nvm/nvm.sh && yarn cypress run
+      - run:
+          name: codechecks
+          command: source /opt/circleci/.nvm/nvm.sh && yarn codechecks

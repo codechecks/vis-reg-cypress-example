@@ -1,0 +1,5 @@
+checks:
+  - name: vis-reg
+    options:
+      collectionName: "E2E"
+      imagesPath: "./cypress/screenshots"
