@@ -10,7 +10,8 @@ jobs:
     parallelism: 1
     steps:
       - checkout
-      - run: yarn
+      - run: .circleci/install-yarn.sh
+      - run: source /opt/circleci/.nvm/nvm.sh && yarn
       - run:
           name: Running E2E tests with JUnit reporter
-          command: yarn cypress open
+          command: source /opt/circleci/.nvm/nvm.sh && yarn cypress open
